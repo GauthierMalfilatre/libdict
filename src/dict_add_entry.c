@@ -4,7 +4,7 @@
 ** File description:
 ** Header file for liblifo
 */
-#include "dict.h"
+#include "../include/dict.h"
 
 dict_t *dict_add_entry(dict_t **head, const char *key, void *stuff)
 {

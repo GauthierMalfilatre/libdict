@@ -4,7 +4,7 @@
 ** File description:
 ** Header file for liblifo
 */
-#include "dict.h"
+#include "../include/dict.h"
 
 static void remove_node(dict_t **head, dict_t *node)
 {

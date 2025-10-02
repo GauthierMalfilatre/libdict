@@ -4,7 +4,7 @@
 ** File description:
 ** Dump the dictionnary
 */
-#include "dict.h"
+#include "../include/dict.h"
 
 void dict_dump(dict_t *head)
 {

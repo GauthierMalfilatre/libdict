@@ -4,7 +4,7 @@
 ** File description:
 ** Clear the dict
 */
-#include "dict.h"
+#include "../include/dict.h"
 
 void dict_clear(dict_t *head)
 {

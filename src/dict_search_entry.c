@@ -4,7 +4,7 @@
 ** File description:
 ** Header file for liblifo
 */
-#include "dict.h"
+#include "../include/dict.h"
 
 static void filler(dict_t **targeted, dict_t *temp)
 {

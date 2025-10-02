@@ -4,11 +4,13 @@
 ## File description:
 ## Static library for a dictionnary
 ##
-SRC = 	dict_add_entry.c \
-		dict_remove_entry.c \
-		dict_search_entry.c \
-		dict_clear.c \
-		dict_dump.c \
+SRC = 	src/dict_add_entry.c \
+		src/dict_remove_entry.c \
+		src/dict_search_entry.c \
+		src/dict_clear.c \
+		src/dict_dump.c \
+
+CFLAGS += -Iinclude/ -Wall -Wextra -Werror
 
 OBJ = $(SRC:.c=.o)
 

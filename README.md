@@ -19,7 +19,7 @@ make
 make re
 ```
 
-This will generate `libdict.a` in the `build/` directory.
+This will generate `libdict.a` in the `./` directory.
 
 ## Usage
 
@@ -66,7 +66,6 @@ gcc main.c -Lbuild/ -ldict -o main
 .
 ├── include/       # Public headers (.h)
 ├── src/           # Source files (.c)
-├── build/         # Compiled objects + libmylib.a
 ├── Makefile
 └── README.md
 ```
