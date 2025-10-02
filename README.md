@@ -4,7 +4,7 @@ A simple static library (`.a`) providing dictionnary basic functions.
 
 ## Features
 
-* Real utility if you don't wan to have too many variables in your code
+* Real utility if you don't want to have too many variables in your code
 * Easy integration into other projects
 
 ## Build
