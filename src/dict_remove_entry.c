@@ -27,7 +27,7 @@ static void remove_node(dict_t **head, dict_t *node)
 void *dict_remove_entry(dict_t **head, const char *key)
 {
     dict_t *targeted = (dict_t *) 0;
-    void *stuff = (void *) 0; 
+    void *stuff = (void *) 0;
 
     if (!head) {
         return (void *) 0;
