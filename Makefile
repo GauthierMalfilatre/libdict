@@ -9,6 +9,7 @@ SRC = 	src/dict_add_entry.c \
 		src/dict_search_entry.c \
 		src/dict_clear.c \
 		src/dict_dump.c \
+		src/dict_change_entry.c \
 
 CFLAGS += -Iinclude/ -Wall -Wextra -Werror
 

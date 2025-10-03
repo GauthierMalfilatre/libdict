@@ -10,6 +10,7 @@
     #include <string.h>
     #include <stdio.h>
     #define dict_add_entry(head, key, stuff) (__dict_add_entry((head), (key), ((void *)(stuff))))
+    #define dict_change_entry(head, key, stuff) (__dict_change_entry((head), (key), ((void *)(stuff))))
     #define dict_search_int(head, key) ((int)dict_search_entry((head), (key)))
     #define dict_search_str(head, key) ((char*)dict_search_entry((head), (key)))
 
@@ -25,9 +26,11 @@ dict_t *__dict_add_entry(dict_t **head, const char *key, void *stuff);
 
 int dict_node_exists(dict_t *head, const char *key, dict_t **targeted);
 
-void *dict_remove_entry(dict_t **head, const char *key);
+void *__dict_change_entry(dict_t *head, const char *key, void *new);
 
 void *dict_search_entry(dict_t *head, const char *key);
+
+void *dict_remove_entry(dict_t **head, const char *key);
 
 void dict_clear(dict_t *head);
 
