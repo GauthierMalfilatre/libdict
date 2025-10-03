@@ -33,20 +33,20 @@ int main(void) {
     dict_t *dictionnary = NULL;
 
     // Add an entry
-    dict_add_entry(&dictionnary, "variable_1", 42);
+    DICT_ADD_ENTRY(&dictionnary, "variable_1", 42);
 
-    dict_add_entry(&dictionnary, "variable_2", strdup("Epitech > 42"));
-    dict_add_entry(&dictionnary, "variable_3", 626);
-    dict_add_entry(&dictionnary, "variable_4", 988);
+    DICT_ADD_ENTRY(&dictionnary, "variable_2", strdup("Epitech > 42"));
+    DICT_ADD_ENTRY(&dictionnary, "variable_3", 626);
+    DICT_ADD_ENTRY(&dictionnary, "variable_4", 988);
 
     // Remove an entry
     dict_remove_entry(&dictionnary, "variable_3");
 
     // Search an entry (int)
-    int variable_4 = dict_search_int(dictionnary, "variable_4");
+    int variable_4 = DICT_SEARCH_INT(dictionnary, "variable_4");
     
     // Print an entry (char *)
-    printf("Variable 2 : %s\n", dict_search_str(dictionnary, "variable_2"));
+    printf("Variable 2 : %s\n", DICT_SEARCH_STR(dictionnary, "variable_2"));
 
     // Dump the dictionnary
     dict_dump(dictionnary);
