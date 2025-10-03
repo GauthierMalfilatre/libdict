@@ -9,9 +9,10 @@
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
-    #define dict_add_entry(head, key, stuff) (__dict_add_entry((head), (key), ((void *)(stuff))))
-    #define dict_search_int(head, key) ((int)dict_search_entry((head), (key)))
-    #define dict_search_str(head, key) ((char*)dict_search_entry((head), (key)))
+    #define DA dict_add_entry_nc
+    #define DICT_ADD_ENTRY(h, k, s) (DA((h), (k), ((void *)(s))))
+    #define DICT_SEARCH_INT(h, k) ((int)dict_search_entry((h), (k)))
+    #define DICT_SEARCH_STR(h, k) ((char *)dict_search_entry((h), (k)))
 
 typedef struct dict_s {
     char *key;
@@ -21,7 +22,7 @@ typedef struct dict_s {
 } dict_t;
 
 
-dict_t *__dict_add_entry(dict_t **head, const char *key, void *stuff);
+dict_t *dict_add_entry_nc(dict_t **head, const char *key, void *stuff);
 
 int dict_node_exists(dict_t *head, const char *key, dict_t **targeted);
 

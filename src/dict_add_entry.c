@@ -6,7 +6,7 @@
 */
 #include "../include/dict.h"
 
-dict_t *__dict_add_entry(dict_t **head, const char *key, void *stuff)
+dict_t *dict_add_entry_nc(dict_t **head, const char *key, void *stuff)
 {
     dict_t *new = (dict_t *) 0;
     char *dupkey = (char *) 0;
