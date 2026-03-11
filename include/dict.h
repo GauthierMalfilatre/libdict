@@ -9,16 +9,19 @@
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
-    #define dict_add_entry(head, key, stuff) (__dict_add_entry((head), (key), ((void *)(stuff))))
-    #define dict_change_entry(head, key, stuff) (__dict_change_entry((head), (key), ((void *)(stuff))))
-    #define dict_search_int(head, key) ((int)dict_search_entry((head), (key)))
-    #define dict_search_str(head, key) ((char*)dict_search_entry((head), (key)))
+    #define dict_add_entry(h, k, s) (__dict_add_entry((h), (k), ((void *)(s))))
+    #define dict_change_entry(h, k, s) (__dict_change_entry((h), (k), ((void *)(s))))
+    #define dict_search_int(h, k) ((int)dict_search_entry((h), (k)))
+    #define dict_search_str(h, k) ((char*)dict_search_entry((head), (key)))
+    #define dict_search(t, h, k) ((t)dict_search_entry((h), (k)))
 
 typedef struct dict_s {
+
     char *key;
     void *item;
     struct dict_s *next;
     struct dict_s *prev;
+
 } dict_t;
 
 
